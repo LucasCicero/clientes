@@ -17,9 +17,11 @@ import java.util.List;
 @CrossOrigin("http://localhost:4200")
 public class ClienteController {
 
+
     @Autowired
     private ClienteRepository repository;
 
+    @GetMapping
     public List<Cliente> obterTodos(){
         return repository.findAll();
     }
